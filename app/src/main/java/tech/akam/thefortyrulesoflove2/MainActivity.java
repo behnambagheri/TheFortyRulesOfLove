@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,23 +21,17 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.List;
 
-import tech.akam.thefortyrulesoflove2.adapters.DescriptionAdapter;
 import tech.akam.thefortyrulesoflove2.adapters.sumBookAdapter;
 import tech.akam.thefortyrulesoflove2.app.app;
-import tech.akam.thefortyrulesoflove2.interfaces.RulesNumberClickListener;
-import tech.akam.thefortyrulesoflove2.objects.DescriptionObjects;
 import tech.akam.thefortyrulesoflove2.objects.sumBookObjects;
-import tech.akam.thefortyrulesoflove2.activities.rulesDescription;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener , RulesNumberClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener  {
 
     RecyclerView recyclerView;
 
     List<sumBookObjects> list ;
-//    List<DescriptionObjects> listDec;
 
     sumBookAdapter adapter;
-//    DescriptionAdapter adapterDec;
 
     MaterialToolbar toolbar;
     FloatingActionButton fab;
@@ -68,14 +61,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fab.setOnClickListener ( this );
 
         list = setData ();
-//        listDec = setDataDec ();
 
         adapter = new sumBookAdapter ( list , this );
-//        adapterDec = new DescriptionAdapter ( listDec , this );
 
         recyclerView.setAdapter ( adapter );
 
-       setLayoutManager (  );
+        setLayoutManager (  );
 
         Animation animation = AnimationUtils.loadAnimation ( this , android.R.anim.slide_in_left );
         LayoutAnimationController animationController = new LayoutAnimationController ( animation );
@@ -83,32 +74,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         recyclerView.setLayoutAnimation ( animationController );
 
 
+
         toolbar        = findViewById ( R.id.toolbar );
-
-//        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager ( getApplicationContext () );
-
-//      RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager ( this , LinearLayoutManager.VERTICAL , false);
-//      RecyclerView.LayoutManager gLayoutManager = new GridLayoutManager ( this , 2 );
-
-
-//        recyclerView.setLayoutManager ( mLayoutManager );
-//        recyclerView.setLayoutManager ( gLayoutManager );
 
         RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration ( this , DividerItemDecoration.VERTICAL );
         recyclerView.addItemDecoration ( itemDecoration );
-//        recyclerView.setItemAnimator(new DefaultItemAnimator ());
-//        recyclerView.setHasFixedSize(true);
 
         toolbar.setTitle ( R.string.app_name_Fa );
+        toolbar.setTitleTextAppearance ( this , R.style.toolbarAppearance );
         setSupportActionBar ( toolbar );
-
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        toolbar.setTitle ( R.string.app_name_Fa );
-//        toolbar.setTitleTextColor ( Color.WHITE );
-//        getWindow ().getDecorView ().setLayoutDirection ( View.LAYOUT_DIRECTION_RTL );
-
-
-
 
     }
 
@@ -127,7 +101,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (menuItemsId == R.id.settings){
             app.t (getString ( R.string.settings ) + " " + getString ( R.string.clicked ) );
-            Intent intent = new Intent ( item.getClass ().getName () );
         }
         else if ( menuItemsId == R.id.about) {
             app.t ( getString ( R.string.about ) + " " + getString ( R.string.about ) );
@@ -138,9 +111,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         else if ( menuItemsId == R.id.exit){
             finish ();
         }
-       /* else if ( menuItemsId == android.R.id.home){
-            onBackPressed ();
-        }*/
 
         return super.onOptionsItemSelected ( item );
     }
@@ -160,24 +130,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    @Override
-    public void onClick(sumBookObjects objects) {
-
-
-
-
-
-
-        Intent intent = new Intent ( this , rulesDescription.class );
-        intent.putExtra ( "objects" , objects );
-        startActivity ( intent );
-
-//        app.t ( objects.getRulesDescription () );
-    }
-
-
-
-
 
     private List<sumBookObjects> setData(){
 
@@ -188,259 +140,250 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         sumBookObjects object = new sumBookObjects (  );
 
         object.setRulesNumber ( getString ( R.string.introduction ) );
-
-
-//        object.setRulesDescription ( getString ( R.string.introductionDescription ) );
+        object.setRulesDescription ( getString ( R.string.introductionDescription ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law01 ) );
+        object.setRulesDescription ( getString ( R.string.law01Text ) );
 
-//        object.setRulesDescription ( getString ( R.string.introductionDescription ) );
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law02 ) );
+        object.setRulesDescription ( getString ( R.string.law02Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law03 ) );
+        object.setRulesDescription ( getString ( R.string.law03Text ) );
+
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law04 ) );
+        object.setRulesDescription ( getString ( R.string.law04Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law05 ) );
+        object.setRulesDescription ( getString ( R.string.law05Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law06 ) );
+        object.setRulesDescription ( getString ( R.string.law06Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law07 ) );
+        object.setRulesDescription ( getString ( R.string.law07Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law08 ) );
+        object.setRulesDescription ( getString ( R.string.law08Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law09 ) );
+        object.setRulesDescription ( getString ( R.string.law09Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law10 ) );
+        object.setRulesDescription ( getString ( R.string.law10Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law11 ) );
+        object.setRulesDescription ( getString ( R.string.law11Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law12 ) );
+        object.setRulesDescription ( getString ( R.string.law12Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law13 ) );
+        object.setRulesDescription ( getString ( R.string.law13Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law14 ) );
+        object.setRulesDescription ( getString ( R.string.law14Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law15 ) );
+        object.setRulesDescription ( getString ( R.string.law25Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law16 ) );
+        object.setRulesDescription ( getString ( R.string.law16Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law17 ) );
+        object.setRulesDescription ( getString ( R.string.law17Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law18 ) );
+        object.setRulesDescription ( getString ( R.string.law18Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law19 ) );
+        object.setRulesDescription ( getString ( R.string.law19Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law20 ) );
+        object.setRulesDescription ( getString ( R.string.law20Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law21 ) );
+        object.setRulesDescription ( getString ( R.string.law21Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law22 ) );
+        object.setRulesDescription ( getString ( R.string.law22Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law23 ) );
+        object.setRulesDescription ( getString ( R.string.law23Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law24 ) );
+        object.setRulesDescription ( getString ( R.string.law24Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law25 ) );
+        object.setRulesDescription ( getString ( R.string.law25Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law26 ) );
+        object.setRulesDescription ( getString ( R.string.law26Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law27 ) );
+        object.setRulesDescription ( getString ( R.string.law27Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law28 ) );
+        object.setRulesDescription ( getString ( R.string.law28Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law29 ) );
+        object.setRulesDescription ( getString ( R.string.law29Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law30 ) );
+        object.setRulesDescription ( getString ( R.string.law30Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law31 ) );
+        object.setRulesDescription ( getString ( R.string.law31Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law32 ) );
+        object.setRulesDescription ( getString ( R.string.law32Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law33 ) );
+        object.setRulesDescription ( getString ( R.string.law33Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law34 ) );
+        object.setRulesDescription ( getString ( R.string.law34Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law35 ) );
+        object.setRulesDescription ( getString ( R.string.law35Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law36 ) );
+        object.setRulesDescription ( getString ( R.string.law36Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law37 ) );
+        object.setRulesDescription ( getString ( R.string.law37Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law38 ) );
+        object.setRulesDescription ( getString ( R.string.law38Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law39 ) );
+        object.setRulesDescription ( getString ( R.string.law39Text ) );
 
         list.add ( object );
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law40 ) );
+        object.setRulesDescription ( getString ( R.string.law40 ) );
 
         list.add ( object );
-
-
-
-
-      /*  list.add ( new sumBookObjects ( getString ( R.string.introduction )) );
-        list.add ( new sumBookObjects ( getString ( R.string.law01 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law02 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law03 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law04 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law05 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law06 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law07 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law08 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law09 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law10 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law11 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law12 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law13 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law14 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law15 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law16 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law17 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law18 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law19 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law20 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law21 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law22 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law23 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law24 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law25 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law26 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law27 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law28 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law29 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law30 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law31 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law32 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law33 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law34 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law35 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law36 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law37 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law38 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law39 ) ) );
-        list.add ( new sumBookObjects ( getString ( R.string.law40 ) ) );
-*/
-//        adapter.notifyDataSetChanged ();
 
         return list;
 

@@ -18,10 +18,22 @@
     <style name="textView" parent="ruleButton">
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/fifteen15sp</item>
+        <item name="android:fontFamily">@font/vazir</item>
     </style>
 
     <style name="toolbarTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
         <item name="android:textColorPrimary">@color/white</item>
         <item name="colorControlNormal">#986521</item>
+    </style>
+
+    <style name="toolbarAppearance">
+        <item name="android:fontFamily">@font/vazir</item>
+
+    </style>
+    <style name="ruleDescription">
+        <item name="android:layout_margin">@dimen/sixteen16dp</item>
+        <item name="android:fontFamily">@font/vazir</item>
+        <item name="android:lineSpacingExtra">1dp</item>
+
     </style>
 </resources>

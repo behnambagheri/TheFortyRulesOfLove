@@ -5,6 +5,12 @@
     android:layout_height="match_parent"
     android:id="@+id/decParentId">
 
+    <include
+        layout="@layout/rules_toolbar"
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
 
 
     <TextView

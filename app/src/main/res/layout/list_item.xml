@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -38,8 +39,16 @@
             <TextView
                 android:id="@+id/rulesNumber"
                 style="@style/textView"
-                android:text="@string/laws"
+                tools:text="@string/laws"
+                android:fontFamily="@font/vazir"
                 android:layout_marginEnd="@dimen/eight8dp"/>
+
+            <TextView
+                android:id="@+id/rulesDescription"
+                style="@style/textView"
+                android:text="@string/laws"
+                android:layout_marginEnd="@dimen/eight8dp"
+                android:visibility="gone"/>
 
 
 
