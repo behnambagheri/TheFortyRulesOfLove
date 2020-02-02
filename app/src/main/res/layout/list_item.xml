@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:selectableItemBackground">
+
+
+
+    <RelativeLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_background"
+        android:clickable="?android:selectableItemBackground"
+        android:focusable="true"
+        android:layout_margin="@dimen/sixteen16dp"
+        android:padding="@dimen/eight8dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icon"
+            style="@style/ruleButton"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_border_color_black_24dp"
+            android:contentDescription="@string/contentDescription"/>
+
+        <io.supercharge.shimmerlayout.ShimmerLayout
+            android:id="@+id/shimmerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:layout_toStartOf="@+id/icon"
+            app:shimmer_animation_duration="11200"
+            app:shimmer_color="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/rulesNumber"
+                style="@style/textView"
+                android:text="@string/laws"
+                android:layout_marginEnd="@dimen/eight8dp"/>
+
+
+
+        </io.supercharge.shimmerlayout.ShimmerLayout>
+
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icLike"
+            style="@style/ruleButton"
+            android:src="@drawable/ic_favorite_border_black_24dp"
+            android:contentDescription="@string/contentDescription"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

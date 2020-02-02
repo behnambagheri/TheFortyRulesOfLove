@@ -1,0 +1,94 @@
+<resources>
+
+    <!-- Activity Titles -->
+    <string name="app_name">The Forty Rules Of Love</string>
+    <string name="app_name_Fa">ملت عشق</string>
+
+    <!-- TEMPLATES -->
+
+    <string name="contentDescription">Content Description</string>
+    <string name="laws">قانون‌ها</string>
+    <string name="clicked">Clicked</string>
+
+    <!-- MENU -->
+    <string name="settings">Settings</string>
+    <string name="about">About</string>
+    <string name="search">Search</string>
+    <string name="exit">Exit</string>
+    <string name="more">More</string>
+
+    <!-- MENU - FA -->
+    <string name="settingsFa">تنظیمات</string>
+    <string name="aboutFa">درباره ما</string>
+    <string name="searchFa">جست‌وجو</string>
+    <string name="exitFa">خروج</string>
+    <string name="moreFa">منو</string>
+
+
+    <!-- Buttons -->
+    <string name="introduction">مقدمه</string>
+    <string name="law01">قانون اول</string>
+    <string name="law02"> قانون دوم</string>
+    <string name="law03">قانون سوم</string>
+    <string name="law04">قانون چهارم</string>
+    <string name="law05">قانون پنجم</string>
+    <string name="law06">قانون ششم</string>
+    <string name="law07">قانون هفتم</string>
+    <string name="law08">قانون هشتم</string>
+    <string name="law09">قانون نهم</string>
+    <string name="law10">قانون دهم</string>
+    <string name="law11">قانون یازدهم</string>
+    <string name="law12">قانون دوازدهم</string>
+    <string name="law13">قانون سیزدهم</string>
+    <string name="law14">قانون چهاردهم</string>
+    <string name="law15">قانون پانزدهم</string>
+    <string name="law16">قانون شانزدهم</string>
+    <string name="law17">قانون هفدهم</string>
+    <string name="law18">قانون هجدهم</string>
+    <string name="law19">قانون نوزدهم</string>
+    <string name="law20">قانون بیستم</string>
+    <string name="law21">قانون بیست و یکم</string>
+    <string name="law22">قانون بیست و دوم</string>
+    <string name="law23">قانون بیست و سوم</string>
+    <string name="law24">قانون بیست و چهارم</string>
+    <string name="law25">قانون بیست و پنجم</string>
+    <string name="law26">قانون بیست و ششم</string>
+    <string name="law27">قانون بیست و هفتم</string>
+    <string name="law28">قانون بیست و هشتم</string>
+    <string name="law29">قانون بیست و نهم</string>
+    <string name="law30">قانون سی‌ام</string>
+    <string name="law31">قانون سی و یکم</string>
+    <string name="law32">قانون سی و دوم</string>
+    <string name="law33">قانون سی و سوم</string>
+    <string name="law34">قانون سی و چهارم</string>
+    <string name="law35">قانون سی و پنجم</string>
+    <string name="law36">قانون سی و ششم</string>
+    <string name="law37">قانون سی و هفتم</string>
+    <string name="law38">قانون سی و هشتم</string>
+    <string name="law39">قانون سی و نهم</string>
+    <string name="law40">قانون چهلم</string>
+
+    <string name="introductionDescription">
+        چهل قانون عشق که به نام ملت عشق نیز شناخته می‌شود، توسط نویسنده فرانسوی متولد ترکیه «الیف شافاک» نوشته شده است. این رمان که پرفروش‌ترین کتاب تاریخ ترکیه به حساب می‌آید، اثری برگرفته از ارتباط عرفانی بین شمس تبریزی و مولانا است که به صورت دو داستان موازی و در هم تنیده روایت می‌شود. بطن اصلی کتاب حول موضوع عشق و نقش آن در دنیای مدرن امروز نسبت به گذشته می‌نگرد و چنان آن را از غرب به شرق گسترش می‌دهد که به زندگی رنگ و بویی عرفانی و زاییده شده از عشق می‌دهد. اینکه چگونه قطعه سنگی کوچک، برکه‌ای راکد و خاموش را به تلاطم و جنبش وا می‌دارد.
+    </string>
+
+    <string name="law01Text">
+        کلماتی که برای توصیف پروردگار به کار می‌بریم، همچون آینه‌ای است که خود را در آن می‌بینیم. هنگامی که نام خدا را می‌شنوی ابتدا اگر موجودی ترسناک و شرم‌آور به ذهنت بیاید، به این معناست که تو نیز بیشتر مواقع در ترس و شرم به سر می‌بری. اگر هنگامی که نام خدا را می‌شنوی ابتدا عشق و لطف و مهربانی به یادت بیاید، به این معناست که این صفات در وجود تو نیز فراوان است.
+    </string>
+
+    <string name="law02Text">
+        پیمودن راه حق کار دل است، نه کار عقل. راهنمایت همیشه دلت باشد، نه سری که بالای شانه‌هایت است. از کسانی باش که به نفس خود آگاهند، نه از کسانی که نفس خود را نادیده می‌گیرند.
+    </string>
+
+    <string name="law03Text">
+        قرآن را می‌توان در چهار سطح خواند. سطح اول معنای ظاهری است. بعدی معنای باطنی است. سومی بطنِ بطن است. سطح چهارم چنان عمیق است که در وصف نمی‌گنجد.
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment1">Hello blank fragment || "FRAGMENT A"</string>
+    <string name="hello_blank_fragment2">Hello blank fragment || "FRAGMENT B"</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

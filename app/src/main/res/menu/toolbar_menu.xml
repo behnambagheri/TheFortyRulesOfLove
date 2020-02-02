@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/more"
+        android:title="@string/moreFa"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_menu_black_24dp"
+        android:orderInCategory="3">
+
+        <menu>
+
+            <item
+                android:id="@+id/settings"
+                android:title="@string/settingsFa"/>
+
+            <item
+                android:id="@+id/about"
+                android:title="@string/aboutFa"/>
+
+        </menu>
+    </item>
+
+
+    <item
+        android:id="@+id/exit"
+        android:title="@string/exitFa"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_exit_to_app_black_24dp"
+        android:orderInCategory="1"/>
+
+    <item
+        android:id="@+id/search"
+        android:title="@string/searchFa"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:orderInCategory="2"/>
+
+
+
+</menu>
