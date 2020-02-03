@@ -3,6 +3,7 @@ package tech.akam.thefortyrulesoflove2.activities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -57,9 +58,13 @@ public class rulesDescription extends AppCompatActivity {
 
         if (menuItemsId == R.id.settings){
             app.t (getString ( R.string.settings ) + " " + getString ( R.string.clicked ) );
+            Intent intent = new Intent ( this , Settings.class );
+            startActivity ( intent );
         }
         else if ( menuItemsId == R.id.about) {
             app.t ( getString ( R.string.about ) + " " + getString ( R.string.about ) );
+            Intent intent = new Intent ( this , AboutUs.class );
+            startActivity ( intent );
         }
         else if (menuItemsId == R.id.search){
             app.t ( getString ( R.string.search ) + " " + getString ( R.string.clicked ) );

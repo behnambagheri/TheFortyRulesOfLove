@@ -1,4 +1,4 @@
-package tech.akam.thefortyrulesoflove2;
+package tech.akam.thefortyrulesoflove2.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,6 +22,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.List;
 
+import tech.akam.thefortyrulesoflove2.R;
 import tech.akam.thefortyrulesoflove2.adapters.sumBookAdapter;
 import tech.akam.thefortyrulesoflove2.app.app;
 import tech.akam.thefortyrulesoflove2.objects.sumBookObjects;
@@ -101,9 +103,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (menuItemsId == R.id.settings){
             app.t (getString ( R.string.settings ) + " " + getString ( R.string.clicked ) );
+            Intent intent = new Intent ( this , Settings.class );
+            startActivity ( intent );
         }
         else if ( menuItemsId == R.id.about) {
-            app.t ( getString ( R.string.about ) + " " + getString ( R.string.about ) );
+            app.t ( getString ( R.string.about ) + " " + getString ( R.string.clicked ) );
+            Intent intent = new Intent ( this , AboutUs.class );
+            startActivity ( intent );
         }
         else if (menuItemsId == R.id.search){
             app.t ( getString ( R.string.search ) + " " + getString ( R.string.clicked ) );
@@ -381,7 +387,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         object = new sumBookObjects (  );
         object.setRulesNumber ( getString ( R.string.law40 ) );
-        object.setRulesDescription ( getString ( R.string.law40 ) );
+        object.setRulesDescription ( getString ( R.string.law40Text ) );
 
         list.add ( object );
 

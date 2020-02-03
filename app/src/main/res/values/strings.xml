@@ -9,6 +9,8 @@
     <string name="contentDescription">Content Description</string>
     <string name="laws">قانون‌ها</string>
     <string name="clicked">Clicked</string>
+    <string name="aboutUsSoonFa">صفحه درباره ما به زودی تکمیل خواهد شد.</string>
+    <string name="settingsSoonFa">صفحه تنظیمات به زودی تکمیل خواهد شد.</string>
 
     <!-- MENU -->
     <string name="settings">Settings</string>

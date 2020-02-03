@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import tech.akam.thefortyrulesoflove2.MainActivity;
 import tech.akam.thefortyrulesoflove2.R;
 import tech.akam.thefortyrulesoflove2.app.Application;
 import tech.akam.thefortyrulesoflove2.interfaces.RulesDescriptionClickListener;
