@@ -26,4 +26,7 @@
         android:textColor="@color/white"
         android:fontFamily="@font/vazir"/>
 
+
+
+
 </RelativeLayout>

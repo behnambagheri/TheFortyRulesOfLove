@@ -7,4 +7,5 @@
     <color name="white">#ffffff</color>
     <color name="colorItem">#222324</color>
     <color name="colorIcBackground">#9e9e9e</color>
+    <color name="colorDivider">#9e9e9e</color>
 </resources>
